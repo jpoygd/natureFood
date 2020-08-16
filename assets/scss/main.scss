@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'navBar';
+@import 'cards';
+@import 'heroSection';
+@import 'products';
+@import 'footer';
+
+body{
+    background-color: $light;
+}
+
+.marginTop{
+    margin-top:10%;
+}
+
+.marginTopRows{
+    margin-top:4%;
+}
+
+.nopads{
+    padding:0 auto;
+}
+
