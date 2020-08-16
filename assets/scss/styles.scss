@@ -1,0 +1,60 @@
+$light:#fcfcfc;
+$accent:#2BC39F;
+$fadedText:#A09A97;
+$textColor:#443D3A;
+$accentLight:#FFF71A;
+$font:'Montserrat', sans-serif;
+$font-bold: 700;
+$font-semibold: 600;
+$font-medium: 500;
+$h1:82px;
+$h3:30px;
+$h4:25px;
+$button:16px;
+$p:18px;
+$i:20px;
+
+@mixin headings ($h, $weight, $font, $light){
+    font-size:$h;
+    font-weight: $weight;
+    font-family: $font;
+    color:$light;
+}
+
+h1{
+    @include headings($h1,$font-semibold,$font ,$textColor)
+}
+
+h3{
+    @include headings($h3,$font-bold,$font ,$textColor)
+}
+
+h4{
+    @include headings($h4,$font-bold ,$font ,$textColor )
+}
+
+p{
+    @include headings($p,$font-medium ,$font ,$fadedText)
+}
+
+
+
+body{
+	background-color: $light;
+}
+
+.navBar{
+    margin:2% 0;
+    align-items: center;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-decoration: none;
+    }
+    li{
+        padding-right:5%;
+        text-decoration: none;
+    }
+}
