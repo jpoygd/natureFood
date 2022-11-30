@@ -1,0 +1,53 @@
+$light:#fcfcfc;
+$lightbackground:#f2f2f2;
+$accent:#2BC39F;
+$fadedText:#A09A97;
+$textColor:#443D3A;
+$accentLight:#FFF71A;
+$shadows: #E7E7E7;
+$font:'Montserrat', sans-serif;
+$font-bold: 700;
+$font-semibold: 600;
+$font-medium: 500;
+$h1:82px;
+$h2:40px;
+$h3:20px;
+$h4:18px;
+$button:14px;
+$p:16px;
+$i:22px;
+
+@mixin headings ($h, $weight, $font, $light){
+    font-size:$h;
+    font-weight: $weight;
+    font-family: $font;
+    color:$light;
+}
+
+h1{
+    @include headings($h1,$font-semibold,$font ,$textColor)
+}
+
+h2{
+    @include headings($h2,$font-semibold,$font,$textColor )
+}
+
+h3{
+    @include headings($h3,$font-bold,$font ,$textColor)
+}
+
+h4{
+    @include headings($h4,$font-bold ,$font ,$textColor )
+}
+
+p{
+    @include headings($p,$font-medium ,$font ,$fadedText)
+}
+
+button{
+    @include headings($button,$font-semibold ,$font ,$textColor )
+}
+
+i{
+    font-size:$i;
+}

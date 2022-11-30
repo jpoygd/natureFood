@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+        "id":"1",
+        "image" : "./img/banana.png",
+        "type" : "Bananas",
+        "price" : 80.00
+    },
+    {
+        "id":"2",
+        "image" : "./img/frutilla.png",
+         "type" : "Frutillas",
+         "price" : 360.00
+    },
+    { 
+        "id":"3",
+        "image" : "./img/kiwi.png",
+        "type" : "Kiwi",
+        "price" : 240.00
+    },
+    {
+        "id":"4",
+        "image" : "./img/naranja.png",
+        "type" : "Naranja Ombligo",
+        "price" : 46.00
+    },
+    {
+        "id":"5",
+        "image" : "./img/durazno.png",
+        "type" : "Durazno",
+        "price" : 250.00
+    },
+    {
+        "id":"6",
+        "image" : "./img/limon.png",
+        "type" : "Limón",
+        "price" : 95.00
+    },
+    {
+        "id":"7",
+        "image" : "./img/manzana.png",
+        "type" : "Manzana Deliciosa",
+        "price" : 170.00
+    },
+    {
+        "id":"8",
+        "image" : "./img/pomelo.png",
+        "type" : "Pomelo Rosado",
+        "price" : 260.00
+    }]
+}
+    

@@ -4,9 +4,12 @@
 @import 'heroSection';
 @import 'products';
 @import 'footer';
+@import 'shoppingCart';
 
 body{
     background-color: $light;
+    text-decoration:none;
+    list-style: none;
 }
 
 .marginTop{

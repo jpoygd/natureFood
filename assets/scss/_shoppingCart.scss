@@ -1,0 +1,141 @@
+.shoppingCart{
+    background-color: $lightbackground;
+    width:30vw;
+    height:100vh;
+    right:0;
+    top:0;
+    position: fixed;
+    z-index:10;
+    padding:2%;
+    transform: translateX(100%);
+    visibility: hidden;
+    
+
+    h3{
+        text-align: center;
+        padding-bottom:5%;
+        padding-top:5%;
+    }
+}
+
+.showCart{
+    transform: translateX(0);
+}
+.cartOpen{
+    visibility: visible;
+}
+
+.shoppingCartProductSpace{
+    overflow-y: scroll;
+    width:100%;
+    height:50%;
+}
+
+.cart-items {
+    position: absolute;
+    background: $accent;
+    padding: 2px 5px;
+    border-radius: 30%;
+    color: white;
+    z-index:2;
+    right:40%;
+    bottom:10%;
+  }
+
+
+.itemsShoppingCart{
+    background-color: white;
+    padding:5%;
+    border-radius:20px;
+    margin-bottom:2%;
+
+    .imgShoppingCart{
+        width:100%;
+        height:auto;
+        vertical-align: middle;
+    }
+
+    h3{
+        text-align: left;
+        padding-bottom:0;
+        padding-top:0;
+    }
+}
+
+.cantSelectorShoppingCart{
+    text-align: center;
+    p{
+        font-weight: $font-semibold;
+        color:$textColor;
+        margin-top:20px;
+    }
+}
+
+.increaseCantShoppingCart{
+    border:none;
+    background-color: transparent;
+}
+.decreaseCantShoppingCart{
+    border:none;
+    background-color: transparent;
+}
+
+.removeShoppingCart{
+    text-decoration: none;
+    color:$fadedText;
+    font-weight: $font-semibold;
+}
+
+.removeShoppingCart:hover{
+    text-decoration: none;
+    color:$accent;
+    font-weight: $font-semibold;
+}
+
+.amountToPayShoppingCart{
+    p{
+        color:$textColor;
+        font-weight: $font-semibold;  
+    }
+}
+
+.totalAmountShoppingCart{
+    padding:5%;
+    letter-spacing: 2px;
+}
+
+.button{
+    margin-bottom:5%;
+    background-color:$accent;
+    border-radius: 50px;
+    padding:3% 6%;
+    color: white;
+    text-decoration: none;
+    font-weight: $font-bold;
+    letter-spacing: 2px;
+    border: none;
+
+    button:focus{
+        background-color:$accentLight;
+        color:$textColor;
+        text-decoration: none;
+    }
+}
+
+.buttonCheckOut{
+    margin-bottom:5%;
+    background-color:$accent;
+    border-radius: 50px;
+    padding:3% 6%;
+    color: white;
+    text-decoration: none;
+    font-weight: $font-bold;
+    letter-spacing: 2px;
+    border: none;
+
+    .buttonCheckOut:focus{
+        background-color:$accentLight;
+        color:$textColor;
+        text-decoration: none;
+    }
+}

@@ -9,7 +9,7 @@
 	<script src="https://kit.fontawesome.com/309e155de0.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
+<body onload="showGreating()">
     
     <div class="container">
         <div class="row  navBar">
@@ -24,10 +24,14 @@
                      <li><a href="#">VERDURAS</a></li>
                  </ul>   
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-1">
                 <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-basket"></i>
             </div>
+            <div class="col-xl-1">
+                <i class="fas fa-shopping-basket cartBtn"></i>
+                <div class="cart-items ">0</div>
+            </div>
+                
         </div>
         <div class="row heroSection">
             <div class="col-xl-6">
@@ -37,152 +41,65 @@
                 <img src="img/main.png" alt="Imagen de banana y kiwi">
             </div>
         </div>
+        <div class="row">
+            <div class="col-xl-12 welcomeMessage">
+                <h2><span id="greeting">saludo</span> ¿estas listo para hacer tu pedido?</h2>
+            </div>
+        </div> 
         <!--Productos-->
         <div class="row marginTop">
-            <!--producto 1-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/banana.png" alt="Banana">
-                </div>
-                <div class="productDescription">
-                    <h3>Banana</h3>
-                    <p>Precio por kilo $80</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$40.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
-            </div>
-            <!--producto 2-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/frutilla.png" alt="Frutilla">
-                </div>
-                <div class="productDescription">
-                    <h3>Frutillas</h3>
-                    <p>Precio por kilo $360</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$130.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
-            </div>
-            <!--producto 3-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/kiwi.png" alt="kiwi">
-                </div>
-                <div class="productDescription">
-                    <h3>Kiwi</h3>
-                    <p>Precio por kilo $240</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$120.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
-            </div>
-            <!--producto 4-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/naranja.png" alt="naranja">
-                </div>
-                <div class="productDescription">
-                    <h3>Naranja Ombligo</h3>
-                    <p>Precio por kilo $46</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$23.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
+            <div class="productContainer">
             </div>
         </div>
-        <div class="row marginTopRows">
-            <!--producto 5-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/durazno.png" alt="Durazno">
-                </div>
-                <div class="productDescription">
-                    <h3>Durazno</h3>
-                    <p>Precio por kilo $250</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
+
+        <!--carrito de compras desplegable-->
+        <div class="shoppingCart openCart">
+            <div>
+                <img class="closeShoppingCart" src="img/closebtn.png" alt="Cerrar carrito de compras">
+            </div>
+            <div>
+                <h3>¡Tu pedido está casi listo!</h3>
+            </div>
+            <div class="shoppingCartProductSpace">
+            <!--Item-->
+            <!--<div class="itemsShoppingCart">
+                 <div class="row">
+                    <div class="col-xl-3">
+                        <img class="imgShoppingCart" src="img/banana.png" alt="Banana">
                     </div>
-                    <h3 class="price">$120.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
+                    <div class="col-xl-7 amountToPayShoppingCart">
+                        <h3>Nombre del Producto</h3>
+                        <p>$<span class="priceItemShoppinCart">00.00</span></p>
+                        <a class="removeShoppingCart" href="#">Eliminar del pedido</a>
+                    </div>
+                    <div class="col-lx-2 cantSelectorShoppingCart">
+                        <button class="increaseCantShoppingCart"><img src="img/increasecart.png" alt="aumentar cantidad"></button>
+                        <p><span class="cantShoppingCart">1</span>kg</p>
+                        <button class="decreaseCantShoppingCart"><img src="img/decreasecart.png" alt="disminuir cantidad"></button>
+                    </div>
                 </div>
             </div>
-            <!--producto 6-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/limon.png" alt="Limón">
-                </div>
-                <div class="productDescription">
-                    <h3>Limón</h3>
-                    <p>Precio por kilo $95</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$47.50</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
+           
             </div>
-            <!--producto 7-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/manzana.png" alt="Manzana Colorada">
-                </div>
-                <div class="productDescription">
-                    <h3>Manzana Deliciosa</h3>
-                    <p>Precio por kilo $170</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$85.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
-            </div>
-            <!--producto 8-->
-            <div class="col-xl-3 productContainer">
-                <div class="productImage">
-                    <img src="img/pomelo.png" alt="Pomelo Rosado">
-                </div>
-                <div class="productDescription">
-                    <h3>Pomelo Rosado</h3>
-                    <p>Precio por kilo $260</p>
-                    <div class="selector justify-content-around">
-                        <img src="img/menos.png" alt="incrementar cantidad">
-                        <h4> 0.5 kg </h4>
-                        <img src="img/mas.png" alt="aumentar cantidad">
-                    </div>
-                    <h3 class="price">$130.00</h3>
-                    <span class="button"><a href="#">¡AL CARRITO!</a></span>
-                </div>
-            </div>
+                -->
         </div>
+        <div class="row justify-content-around totalAmountShoppingCart">
+            <h3>TOTAL DEL PEDIDO: $<span class="finalPriceShoppingCart">00</span></h3>
+        </div>
+        <div class="row justify-content-center">
+                <button class="buttonCheckOut" onclick="checkout()">COMPLETAR PEDIDO</button>
+        </div>
+        <div class="row justify-content-center">
+            <a class="removeShoppingCart" href="#">VACIAR CARRITO</a>
+        </div>
+        <!--fin carrito de compras desplegable-->
     </div>
     <div class="container-fluid  footer">
         <p>© 2020 Nature Food. Todos los derechos reservados.</p>
     </div>    
-
+    
+   
+    <script src="./js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
